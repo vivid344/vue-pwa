@@ -1,19 +1,8 @@
 <template>
   <v-app>
     <v-toolbar dark color="primary">
-      <v-toolbar-title class="white--text">Test</v-toolbar-title>
+      <v-toolbar-title class="white--text">{{this.ID}}</v-toolbar-title>
       <v-spacer></v-spacer>
-
-      <router-link to="/">
-        <v-btn icon>
-          <v-icon>home</v-icon>
-        </v-btn>
-      </router-link>
-      <router-link to="/About">
-        <v-btn icon>
-          <v-icon>info</v-icon>
-        </v-btn>
-      </router-link>
     </v-toolbar>
     <router-view></router-view>
   </v-app>
@@ -26,9 +15,15 @@ layoutでどんな感じでrouter-viewを表示するかを決める
 
 <script>
   import router from '../router'
+  import { mapGetters } from 'vuex'
   export default {
+    name: 'app',
     created () {
       this.checkLogin()
+    },
+    computed: {
+      // 下の宣言でthis.IDで値を使えるようになる
+      ...mapGetters(['ID']),
     },
     methods: {
       checkLogin() {

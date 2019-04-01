@@ -17,14 +17,14 @@ export default new Router({
       component: Home
     },
     {
-          path: '/about',
-          name: 'about',
-          component: About,
+      path: '/about',
+      name: 'about',
+      component: About,
     },
     {
-        path: '/login',
-        name: 'login',
-        component: Login,
+      path: '/login',
+      name: 'login',
+      component: Login,
     }
   ]
 })

@@ -1,16 +1,16 @@
 <template>
   <div class="home">
-    <HelloWorld />
+    {{this.ID}}
   </div>
 </template>
 
 <script>
-import HelloWorld from '../components/HelloWorld'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'home',
-  components: {
-    HelloWorld
-  }
+  computed: {
+    ...mapGetters(['ID']),
+  },
 }
 </script>
