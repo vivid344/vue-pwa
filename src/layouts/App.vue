@@ -14,7 +14,7 @@ layoutでどんな感じでrouter-viewを表示するかを決める
 -->
 
 <script>
-  import router from '../router'
+  import router from '../plugins/router'
   import { mapGetters } from 'vuex'
   export default {
     name: 'app',

@@ -24,9 +24,10 @@
 </template>
 
 <script>
-import router from '../router'
+import router from '../plugins/router'
 import { mapActions } from 'vuex'
-import { LOGIN } from '../store/store'
+import { LOGIN } from '../vuex/actions/test'
+
 export default {
   name: 'login',
   data() {
